@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+/* ============================ */
+/*   1. header                  */
+/* ============================ */
+
+/* menu */
+
+header {
+  max-width:100vw;
+  padding:50px 40px 0 0;
+  margin:0 auto;
+}
+
+header .menu ul {
+  display:flex;   /* menu横並び　*/
+  flex-direction: row;
+  justify-content: flex-end;
+  gap:30px;
+} 
+header .menu li a {
+  display: flex;  /* 項目の縦並び */
+  flex-direction: column;
+  text-align: center;
+}
+
+header .menu .english {
+  font-size: 20px;  /* 英語表記 */
+  padding-top:5px;
+}
+
+header .menu .japanese {
+  font-size: 10px;  /* 日本語表記 */
+}
+
+/* title */
+
+header .hero-title {
+  position:absolute;  /* titleを真ん中に移動 */
+  top:50vh;
+  left:50vw;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+header .hero-title p {
+  font-size: 2rem;
+
+}
+
+header .hero-title h1 {
+  font-size: 3rem;  /* titleのスタイル設定 */
+  user-select:none;
+}
+
+header .hero-title h2 {
+  font-size: 1rem;  /* sub titleのスタイル設定 */
+}
+
+
+
+
+
+.hero-image img {
+  width:100%;
+  height:100vh;
+  object-fit: cover;
+  position:absolute;
+  top:0;
+  opacity: 0.8;
+  z-index: -999;
+}
+
+.test{
+  margin-top: 100vh;
+}

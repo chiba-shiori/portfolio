@@ -7,84 +7,140 @@
     <title>shiori's portfolio.</title>
     <link rel="stylesheet" href="reset.css"> <!-- resetの読み込み -->
     <link rel="stylesheet" href="style.css"> <!-- CSSの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ede82443f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <header>
     <nav class="menu"> 
       <ul>
-        <li class="works">
+        <li class="menu-works">
           <a href="#">
-          <span class="japanese">実績紹介</span>
-          <span class="english">Works</span>
+          <span class="menu-works__jp">実績紹介</span>
+          <span class="menu-works__en">Works</span>
           </a>
         </li>
 
         <li>
           <a href="#">
-          <span class="japanese">提供サービス</span>
-          <span class="english">Service</span>
+          <span class="menu-works__jp">提供スキル</span>
+          <span class="menu-works__en">Skill</span>
           </a>
         </li>
 
         <li>
           <a href="#">
-          <span class="japanese">提供スキル</span>
-          <span class="english">Skill</span>
+          <span class="menu-works__jp">自己紹介</span>
+          <span class="menu-works__en">About</span>
           </a>
         </li>
 
         <li>
           <a href="#">
-          <span class="japanese">制作の流れ</span>
-          <span class="english">Work Flow</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-          <span class="japanese">自己紹介</span>
-          <span class="english">About</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="#">
-          <span class="japanese">お問い合わせ</span>
-          <span class="english">Contact</span>
+          <span class="menu-works__jp">お問い合わせ</span>
+          <span class="menu-works__en">Contact</span>
           </a>
         </li>
       </ul>
     </nav>
-
-      <selection id="hero" class="hero-section">
-        <div class="hero-image">
-          <img src="images/hero-image.jpg">
-        </div>
-
-        <div class="hero-title">
-          <p>Welcome</p>
-
-          <h1>Shiori's Portfolio.</h1>
-
-          <div class="hero-message">
-            <h2>ここには説明文を入力します。</h2>
-          </div>
-        </div>
-
-
-        
-        <div class="hero-social">
-          <ul> <!-- SNSリンク表示 -->
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-
-        <div class="scroll-down"> <!-- スクロールダウン表示 --> </div>
-      </selection>
   </header>
+
+
+    <section id="hero" class="hero">
+      <div class="hero__background">
+        <img src="images/hero-image.jpg" class="hero__image">
+      </div>
+
+      <div class="hero-title">
+            <p>Welcome</p>
+
+            <h1>Shiori's Portfolio.</h1>
+
+            <div class="hero-message">
+              <h2>ここには説明文を入力します。</h2>
+            </div>
+      </div>
+
+      <div class="hero-social">
+            <ul> <!-- SNSリンク表示 -->
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+      </div>
+
+      <div class="scroll-up"> <!-- スクロールダウン表示 --> <!-- 未実施 --></div>
+    </section>
+  
+    <section class="works">
+      <h1 class="works-title">
+        <span class="works-title__box">
+          <span class="works-title__en">Works</span><br>
+          <span class="works-title__jp">わたしの作ったもの</span>
+        </span>
+      </h1>
+
+      <div class="works-area">
+        <div class="works-area__slider">
+          <div class="works-area__slider-card">タイトルと内容1</div>
+          <div class="works-area__slider-card">タイトルと内容2</div>
+          <div class="works-area__slider-card">タイトルと内容3</div>
+          <div class="works-area__slider-card">タイトルと内容3</div>
+          <div class="works-area__slider-card">タイトルと内容3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skill">
+      <h1 class="skill-title">
+          <span class="skill-title__box">
+          <span class="skill-title__en">Skill</span><br>
+          <span class="skill-title__jp">提供スキル</span>
+      </h1>
+
+      <div class="skill-area">
+        <div class="skill-area__card">
+          <i class="fa-brands fa-html5"></i>
+          <p class="skill-area__reki">学習歴：6ヶ月</p>
+          <p class="skill-area__content">デザインをもとに、忠実なマークアップ再現が可能です。ページ構造を意識して読みやすいHTMLの設計を心がけています。 現在はSEOやアクセシビリティを意識したマークアップにも取り組んでいます。 </p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p class="skill-area__reki">学習歴：6ヶ月</p>
+          <p class="skill-area__content">スマートフォンからPCまで対応した、柔軟なレスポンシブ設計が可能です。また、スクロールや視覚効果を活かした、動きのある演出にも取り組んでいます。</p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-brands fa-js"></i>
+          <p class="skill-area__reki">学習歴：3ヶ月</p>
+          <p class="skill-area__content">基礎的な文法やDOM操作、イベント処理を学習中です。今後は動きのあるウェブ表現やjQueryの習得にも取り組む予定です。</p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-solid fa-file-excel"></i></i>
+          <p class="skill-area__reki">学習歴：約6ヶ月</p>
+          <p class="skill-area__content">VBAに関しては独学での学習経験があります。繰り返し処理や条件分岐、セル操作などの基礎的な構文に触れてきました。学んだ知識があるため、必要に応じて短期間で再習得できる自信があります。</p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-brands fa-github"></i>
+          <p class="skill-area__reki">学習歴：2ヶ月</p>
+          <p class="skill-area__content">GitHubのWebインターフェースを使ったリポジトリ管理やブランチ作成の操作は触れております。ローカル環境でのGit操作は今後学習を進めていく予定です。</p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-brands fa-wordpress-simple"></i>
+          <p class="skill-area__reki">学習予定</p>
+          <p class="skill-area__content">現在は未学習ですが、今後のスキルアップのためにWordPressの基本から学び、実際のサイト制作やカスタマイズを行えるようになりたいと考えています。</p>
+        </div>
+        <div class="skill-area__card">
+          <i class="fa-brands fa-php"></i>
+          <p class="skill-area__reki">学習予定</p>
+          <p class="skill-area__content">現在はこちらも未学習ですが、今後はPHPの基礎から学び、WordPressのテーマカスタマイズなどに活かすだけでなく、動的な機能を自分で実装できるようになることを目指しています。</p>
+        </div>
+      </div>
+    </section>
+
+
 </body>
 </html>

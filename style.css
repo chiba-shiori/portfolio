@@ -26,7 +26,16 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--backgroundcolor);
 }
+
+.works, .skill, .about, .contact-title {
+  width:1440px;
+  height:auto;
+  margin: 0 auto;
+}
+
+
 
 
 

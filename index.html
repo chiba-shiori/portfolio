@@ -12,34 +12,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ede82443f1.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body id="top">
 
   <header>
     <nav class="menu"> 
       <ul>
         <li class="menu-works">
-          <a href="#">
+          <a href="#works">
           <span class="menu-works__jp">実績紹介</span>
           <span class="menu-works__en">Works</span>
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="#skill">
           <span class="menu-works__jp">提供スキル</span>
           <span class="menu-works__en">Skill</span>
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="#about">
           <span class="menu-works__jp">自己紹介</span>
           <span class="menu-works__en">About</span>
           </a>
         </li>
 
         <li>
-          <a href="#">
+          <a href="#contact">
           <span class="menu-works__jp">お問い合わせ</span>
           <span class="menu-works__en">Contact</span>
           </a>
@@ -76,7 +76,7 @@
       <div class="scroll-up"> <!-- スクロールダウン表示 --> <!-- 未実施 --></div>
     </section>
   
-    <section class="works">
+    <section class="works" id="works">
       <h1 class="works-title">
         <span class="works-title__box">
           <span class="works-title__en">Works</span><br>
@@ -95,7 +95,7 @@
       </div>
     </section>
 
-    <section class="skill">
+    <section class="skill" id="skill">
       <h1 class="skill-title">
           <span class="skill-title__box">
           <span class="skill-title__en">Skill</span><br>
@@ -138,8 +138,73 @@
           <p class="skill-area__reki">学習予定</p>
           <p class="skill-area__content">現在はこちらも未学習ですが、今後はPHPの基礎から学び、WordPressのテーマカスタマイズなどに活かすだけでなく、動的な機能を自分で実装できるようになることを目指しています。</p>
         </div>
+        <div class="skill-area__card">
+          <i class="#"></i>
+          <p class=""></p>
+          <p class=""></p>
+        </div>
+        <div class="skill-area__card">
+          <i class="#"></i>
+          <p class=""></p>
+          <p class=""></p>
+        </div>
       </div>
     </section>
+
+    <section class="about" id="about">
+      <h1 class="about-title">
+        <span class="about-title__box">
+          <span class="about-title__en">About</span><br>
+          <span class="about-title__jp">わたしについて</span>
+        </span>
+      </h1>
+
+      <div class="about-content__box">
+
+        <div class="about-image__box">
+          <img src="./images/aboutme.webp" class="about-image">
+          <p class="about-content__name-jp">ちば しおり<p><p class="about-content__name-en">CHIBA SHIORI</p>
+        </div>
+
+        <div class="about-speechBubble">
+          <p>はじめまして。<br>
+          <p>元・事務職からIT業界に転身し、現在はIT系ヘルプデスクとして働きながら、Webコーダーを目指して日々学習を続けています。</p><br>
+
+          <p>これまでに、経理や総務などの事務業務を3年間、アプリ開発現場でのテスターとして1年間携わってきました。現在はヘルプデスクとして3年目を迎え、日々、ユーザーの方々の不安をやわらげたり、困りごとへの問題解決に励んでいます。ITパスポート・簿記3級も取得しており、業務理解や情報処理の基礎知識を活かしながら、丁寧で正確な対応を心がけています。</p><br>
+
+          <p>現在は、HTML / CSS / JavaScriptを中心に模写やポートフォリオ制作を通して実践的な力を少しずつ積み上げています。将来的にはWebコーダーとして思いやりをもってものづくりに関われるような働き方をしていきたいと考えています。</p><br>
+
+          <p>また、デザインや動画編集、SNS運用などにも関心があり、自分の“好き”や感性を大事にしながら、できることを広げていきたいと思っています。</p><br><br>
+
+          <p>好きなこと・趣味</p><br>
+          <p>映画やおいしいものを楽しんで、感想やレビューをことばにすること</p>
+          <p>お昼からお酒を飲んで、ペットにダル絡みするのが休日の幸せな時間</p>
+          <p>推し活やSNSでの小さな気づきやお気に入りをシェアすること</p>
+          <p>MBTIや心理テストなど、人となりに触れること</p>
+          <p>日々の中にあるちいさな“うれしい”を大切に、
+          関わる人とも、やわらかく温かなやりとりができたらうれしいです。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h1 class="contact-title">
+        <span class="contact-title__box">
+        <span class="contact-title__en">Contact</span><br>
+        <span class="contact-title__jp">お問い合わせ</span>
+      </h1>
+    </section>
+
+    <footer class="footer" id="footer">
+      <ul class="footer-menu">
+        <li class="footer-menu__content"><a href="#top">Top</a></li>
+        <li class="footer-menu__content"><a href="#works">Works</a></li>
+        <li class="footer-menu__content"><a href="#skill">Skill</a></li>
+        <li class="footer-menu__content"><a href="#about">About</a></li>
+        <li class="footer-menu__content"><a href="#contact">Contact</a></li>
+      </ul>
+      <small class="footer-copyright">&copy; 2025 Chiba Shiori Portfolio.</small>
+    </footer>
 
 
 </body>

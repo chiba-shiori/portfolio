@@ -1,0 +1,146 @@
+<!-- BEMに準拠してクラス名を置換したindex.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shiori's portfolio.</title>
+  <link rel="stylesheet" href="BEM_reset.css">
+  <link rel="stylesheet" href="BEM_style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Noto+Serif+JP&family=Playfair+Display&family=Shippori+Mincho&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ede82443f1.js" crossorigin="anonymous"></script>
+</head>
+<body class="page">
+
+  <header class="menu">
+    <nav class="menu__nav">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#works">
+            <span class="menu__label--jp">実績紹介</span>
+            <span class="menu__label--en">Works</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="#skill">
+            <span class="menu__label--jp">提供スキル</span>
+            <span class="menu__label--en">Skill</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="#about">
+            <span class="menu__label--jp">自己紹介</span>
+            <span class="menu__label--en">About</span>
+          </a>
+        </li>
+        <li class="menu__item">
+          <a href="#contact">
+            <span class="menu__label--jp">お問い合わせ</span>
+            <span class="menu__label--en">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero__background">
+      <img src="images/hero-image.jpg" class="hero__image">
+    </div>
+    <div class="hero__title">
+      <p class="hero__welcome">Welcome</p>
+      <h1 class="hero__main-title">Shiori's Portfolio.</h1>
+      <div class="hero__message">
+        <h2 class="hero__sub-message">ここには説明文を入力します。</h2>
+      </div>
+    </div>
+    <div class="hero__social">
+      <ul class="hero__social-list">
+        <li class="hero__social-item"></li>
+        <li class="hero__social-item"></li>
+        <li class="hero__social-item"></li>
+        <li class="hero__social-item"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="works" id="works">
+    <h1 class="works__title">
+      <span class="works__title-box">
+        <span class="works__title--en">Works</span><br>
+        <span class="works__title--jp">わたしの作ったもの</span>
+      </span>
+    </h1>
+    <div class="works__area">
+      <div class="works__slider">
+        <div class="works__card">タイトルと内容1</div>
+        <div class="works__card">タイトルと内容2</div>
+        <div class="works__card">タイトルと内容3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skill" id="skill">
+    <h1 class="skill__title">
+      <span class="skill__title-box">
+        <span class="skill__title--en">Skill</span><br>
+        <span class="skill__title--jp">提供スキル</span>
+      </span>
+    </h1>
+    <div class="skill__area">
+      <div class="skill__card">
+        <i class="skill__icon fa-brands fa-html5"></i>
+        <p class="skill__experience">学習歴：6ヶ月</p>
+        <p class="skill__description">デザインをもとに忠実なマークアップが可能です。</p>
+      </div>
+      <!-- 他のカードも同様にクラスを置換 -->
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h1 class="about__title">
+      <span class="about__title-box">
+        <span class="about__title--en">About</span><br>
+        <span class="about__title--jp">わたしについて</span>
+      </span>
+    </h1>
+    <div class="about__content">
+      <div class="about__image-box">
+        <img src="./images/aboutme.webp" class="about__image">
+        <div class="about__name-group">
+          <p class="about__name--jp about__name--myoji">ちば</p>
+          <p class="about__name--en">CHIBA</p>
+          <p class="about__name--jp about__name--namae">しおり</p>
+          <p class="about__name--en">SHIORI</p>
+        </div>
+      </div>
+      <div class="about__speech-bubble">
+        <p>はじめまして。元・事務職からIT業界に転身し…</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h1 class="contact__title">
+      <span class="contact__title-box">
+        <span class="contact__title--en">Contact</span><br>
+        <span class="contact__title--jp">お問い合わせ</span>
+      </span>
+    </h1>
+  </section>
+
+  <footer class="footer">
+    <ul class="footer__menu">
+      <li class="footer__item"><a href="#top">Top</a></li>
+      <li class="footer__item"><a href="#works">Works</a></li>
+      <li class="footer__item"><a href="#skill">Skill</a></li>
+      <li class="footer__item"><a href="#about">About</a></li>
+      <li class="footer__item"><a href="#contact">Contact</a></li>
+    </ul>
+    <small class="footer__copyright">&copy; 2025 Chiba Shiori Portfolio.</small>
+  </footer>
+
+</body>
+</html>

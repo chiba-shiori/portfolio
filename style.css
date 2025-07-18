@@ -30,7 +30,8 @@ body {
 }
 
 .works, .skill, .about, .contact-title {
-  width:1440px;
+  max-width:1440px;
+  width:100%;
   height:auto;
   margin: 0 auto;
 }
@@ -175,7 +176,7 @@ header {
   width: 300px;
   height: 500px;
   background-color:#FFF;
-  flex: 0 0 50%; /* 1枚分 */
+  flex: 0 0 45%; /* 1枚分 */
   scroll-snap-align: center;
   padding-bottom: 2rem;
   border: 1px solid var(--basecolor);
@@ -184,7 +185,7 @@ header {
 
 /* skill */
 .skill {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--backgroundcolor);
   position:relative;
 }
@@ -223,12 +224,9 @@ header {
 
 .skill-area {
   width:80%;
-  height:80vh;
-  position:absolute;
-  top: 15%;
-  left: 10%;
   display: flex;
   gap: 30px;
+  margin:-50px auto 0;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -275,7 +273,7 @@ header {
 
 /* about */
 .about {
-  height: 100vh;
+  height: 100%;
   background-color: var(--backgroundcolor);
 }
 
@@ -291,7 +289,6 @@ header {
 .about-title {
   height: var(--worksheight);
   text-align: center;
-  padding-top: 30px;
   cursor: default;
   user-select: none;
 }
@@ -316,36 +313,38 @@ header {
   display: flex;
   width: 80%;
   height:auto;
-  flex-direction: column;
-  margin: 0 auto;
+  flex-direction: row;
+  margin: 0 auto 50px;
   position: relative;
+  gap: 100px;
 }
 
 .about-image__box {
   display: flex;
-  position:absolute;
-  top:-100px;
-  left:100px;
-  align-items: flex-end;
-  z-index: 999;
+  align-items: center;
+  flex-direction: column;
 }
 
-.about-content__name-jp {
-  margin-left: 40px;
-  padding-left: 30px;
-  padding-bottom: 10px;
+.about-content__box-group {
+  display: flex;
+  gap:10px;
+  text-align: center;
+
+  border-bottom: 1px var(--basecolor) double;
+  padding: 30px 15px 8px 15px;
+}
+
+.about-content__name-jp__myoji,
+.about-content__name-jp__namae {
   font-family: var(--jpfont-2);
-  border-bottom: #000000 1px dashed;
   color: #555;
+  font-size: 13px;
 }
 
-.about-content__name-en {
-  margin-left: 1px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 10px;
+.about-content__name-en__namae,
+.about-content__name-en__namae {
   font-family: var(--enfont-2);
-  border-bottom: #000000 1px dashed;
+  font-size: 20px;
   color: #555;
 }
 
@@ -362,7 +361,6 @@ header {
 .about-speechBubble {
   position: relative;
   display: inline-block;
-  margin-top: 10vh;
   padding: 16px;
   border: 1px solid #584c45;
   border-radius: 8px;
@@ -378,23 +376,27 @@ header {
 .about-speechBubble::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 19%;
+  top: 30%;
+  left: 0;
   border-style: solid;
-  border-width: 0 20px 20px 0;
-  border-color: transparent transparent #584c45;
-  translate: -50% -100%;
+  border-width: 10px 20px 10px 0;
+  border-color: transparent #584c45 transparent transparent;
+  translate: -100% -50%;
+  transform: skew(0, 27deg);
+  transform-origin: right;
 }
 
 .about-speechBubble::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 19%;
+  top: 30%;
+  left: 0;
   border-style: solid;
-  border-width: 0 17.6px 17.6px 0;
-  border-color: transparent transparent #ffffff;
-  translate: calc(-50% - 0.2px) -100%;
+  border-width: 7.8px 15.5px 7.8px 0;
+  border-color: transparent #fff transparent transparent;
+  translate: -100% -50%;
+  transform: skew(0, 27deg);
+  transform-origin: right;
 }
 
 /* contact */
@@ -465,4 +467,208 @@ header {
   display: block;
   margin-top:80px;
   font-family: var(--enfont);
+}
+
+/* --------------------------- */
+/*  1440px以下                  */
+/* --------------------------- */
+
+@media (max-width:767px) {
+  
+  /* all */
+  .skill, .contact {
+    padding:0 20px;
+  }
+
+  /* header */
+  header {
+    padding: 0 0 0 0;
+    display: grid;
+    align-items: center;
+  }
+
+  .menu {
+    margin: 0 auto;
+  }
+
+  .menu ul {
+    justify-content: center;
+  }
+
+  /* works */
+
+
+  .works-title__en {  /* en title */
+    font-size: 6rem;
+  }
+
+  .works-title {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  .works-area__slider-card {
+    flex: 0 0 90%;
+  }
+
+  .works-area__slider {
+    padding-top: 0;
+  }
+
+  /* skill */
+  .skill-title__en {
+    font-size: 6rem;
+  }
+
+  .skill-area__card {
+    width:40%;
+    grid-template-columns: 40px 1fr;
+    column-gap: 5px;
+  }
+
+  .skill-area {
+    width: 90%;
+    gap: 40px;
+    margin-top:-100px;
+    z-index: 999;
+    position: relative;
+  }
+
+  .skill-area__reki {
+    font-size: 10px;
+  }
+
+  .skill-area__content {
+    font-size: 10px;
+  }
+
+  .php {
+    padding-left: 10px;
+  }
+
+  .mukou {
+    display: none;
+  }
+
+  /* about */
+  .about-title {
+    padding-top: 20px;
+  }
+
+  .about-title__en {
+    font-size: 6rem;
+  }
+
+  .about-image__box {
+    position:initial;
+    gap: 30px;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .about-image {
+    width: 100px;
+  }
+
+  .about-content__name-jp__myoji,
+  .about-content__name-jp__namae {
+    font-size: 9px;
+  }
+
+  .about-content__name-en__namae,
+  .about-content__name-en__namae {
+    font-size: 18px;
+  }
+
+  .about-speechBubble {
+    margin-top: 5vh;
+  }
+
+  .about-content__box-group {
+    border-bottom: 1px var(--basecolor) double;
+    padding:0 15px 8px 15px;
+  }
+  
+  .about-content__box {
+    flex-direction: column;
+    gap:0;
+    margin-top:-50px;
+  }
+
+/* -- 吹き出し -- */
+.about-speechBubble {
+  position: relative;
+  display: inline-block;
+  padding: 16px;
+  border: 1px solid #584c45;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #555;
+  font-family: var(--jpfont-2);
+}
+
+.about-speechBubble::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 19%;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #000000;
+  translate: -50% -100%;
+  transform: skew(26deg);
+  transform-origin: bottom;
+}
+
+.about-speechBubble::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 19%;
+  border-style: solid;
+  border-width: 0 8.9px 17.8px 8.9px;
+  border-color: transparent transparent #ffffff;
+  translate: -50% -100%;
+  transform: skew(26deg);
+  transform-origin: bottom;
+}
+
+/* contact */
+.contact-title__en {
+    font-size: 6rem;
+}
+
+.contact-title {
+  margin-right: -20px;
+}
+
+/* footer */
+.footer {
+  height: auto;
+  display: grid;
+}
+
+.footer-menu {
+  padding:0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height:10vh;
+}
+
+.footer-menu__content {
+  font-size: 16px;
+}
+
+.footer-copyright {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+
 }

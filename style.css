@@ -29,7 +29,7 @@ body {
   background-color: var(--backgroundcolor);
 }
 
-.works, .skill, .about, .contact-title {
+.works, .skill, .about, .contact {
   max-width:1440px;
   width:100%;
   height:auto;

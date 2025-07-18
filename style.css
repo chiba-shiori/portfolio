@@ -641,6 +641,7 @@ header {
 /* contact */
 .contact-title__en {
     font-size: 4rem;
+    max-height: 80vh;
 }
 
 .contact-title {

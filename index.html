@@ -9,41 +9,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+JP:wght@200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/ede82443f1.js" crossorigin="anonymous"></script>
 </head>
 <body id="top">
 
-  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-  <script>eruda.init();</script>
-
   <header>
-    <nav class="menu"> 
+    <nav class="header__menu"> 
       <ul>
-        <li class="menu-works">
+        <li class="header__menu-item">
           <a href="#works">
-          <span class="menu-works__jp">実績紹介</span>
-          <span class="menu-works__en">Works</span>
+          <span class="header__menu-text--jp">実績紹介</span>
+          <span class="header__menu-text--en">Works</span>
           </a>
         </li>
 
         <li>
           <a href="#skill">
-          <span class="menu-works__jp">提供スキル</span>
-          <span class="menu-works__en">Skill</span>
+          <span class="header__menu-text--jp">提供スキル</span>
+          <span class="header__menu-text--en">Skill</span>
           </a>
         </li>
 
         <li>
           <a href="#about">
-          <span class="menu-works__jp">自己紹介</span>
-          <span class="menu-works__en">About</span>
+          <span class="header__menu-text--jp">自己紹介</span>
+          <span class="header__menu-text--en">About</span>
           </a>
         </li>
 
         <li>
           <a href="#contact">
-          <span class="menu-works__jp">お問い合わせ</span>
-          <span class="menu-works__en">Contact</span>
+          <span class="header__menu-text--jp">お問い合わせ</span>
+          <span class="header__menu-text--en">Contact</span>
           </a>
         </li>
       </ul>
@@ -54,101 +52,153 @@
     <section id="hero" class="hero">
       <div class="hero__background">
         <img src="images/hero-image.jpg" class="hero__image">
+
+        <div class="hero__title">
+          <h1 class="hero__title-main">PORTFOLIO</h1>
+
+          <div class="hero__message">
+            <h2 class="hero__message-sub">あなたの想いを、輪郭に</h2>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-title">
-            <p>Welcome</p>
-
-            <h1>Shiori's Portfolio.</h1>
-
-            <div class="hero-message">
-              <h2>ここには説明文を入力します。</h2>
-            </div>
-      </div>
-
-      <div class="hero-social">
+      <div class="hero__social">
             <ul> <!-- SNSリンク表示 -->
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li class="hero__social-item"></li>
+              <li class="hero__social-item"></li>
+              <li class="hero__social-item"></li>
+              <li class="hero__social-item"></li>
             </ul>
       </div>
 
-      <div class="scroll-up"> <!-- スクロールダウン表示 --> <!-- 未実施 --></div>
+      <div class="hero__scroll-up"> <!-- スクロールダウン表示 --> <!-- 未実施 --></div>
     </section>
   
     <section class="works" id="works">
-      <h1 class="works-title">
-        <span class="works-title__box">
-          <span class="works-title__en">Works</span><br>
-          <span class="works-title__jp">わたしの作ったもの</span>
+
+      <h1 class="works__title">
+        <span class="works__title-box">
+          <span class="works__title-box--en">Works</span><br>
+          <span class="works__title-box--jp">わたしの作ったもの</span>
         </span>
       </h1>
 
-      <div class="works-area">
-        <div class="works-area__slider">
-          <div class="works-area__slider-card">タイトルと内容1</div>
-          <div class="works-area__slider-card">タイトルと内容2</div>
-          <div class="works-area__slider-card">タイトルと内容3</div>
-          <div class="works-area__slider-card">タイトルと内容3</div>
-          <div class="works-area__slider-card">タイトルと内容3</div>
+      <div class="works__area">
+        <div class="works__slider">
+          <a href="./MyPortfolio.html" class="works__card-link">
+          <div class="works__card works__card-portfolio">
+            <img src="./images/works__card-image--portfolio.png" class="works__card-image" alt="ポートフォリオデザイン">
+            <div class="works__card-text">
+              <h2 class="works__card-title">My Portfolio.</h2>
+              <p class="works__card-description">HTML/CSSで作成した、わたし自身のポートフォリオサイトです。デザイン・構築のすべてを一人で行いました。</p>
+              <div class="works__card-tags">
+                <span class="works__card-tag">HTML</span>
+                <span class="works__card-tag">CSS</span>
+                <span class="works__card-tag">レスポンシブ</span>
+                <span class="works__card-tag">デザイン構成</span>
+                <span class="works__card-tag">BEM設計</span>
+              </div>
+            </div>
+          </div>
+          </a>
+
+          <a href="./SkyCoffee.html" class="works__card-link">
+          <div class="works__card works__card-skycoffee">
+            <img src="./images/works__card-image--skycoffee.png" class="works__card-image" alt="架空サイト - sky coffee -">
+            <div class="works__card-text">
+              <h2 class="works__card-title">Sky Coffee</h2>
+              <p class="works__card-description">練習用の提供デザインをもとに、HTML/CSSを用いてコーディングしました。レスポンシブ対応にも配慮し、PC・スマホ両方で見やすくなるよう調整しています。</p>
+              <div class="works__card-tags">
+                <span class="works__card-tag">HTML</span>
+                <span class="works__card-tag">CSS</span>
+                <span class="works__card-tag">レスポンシブ</span>
+                <span class="works__card-tag">模写</span>
+              </div>
+            </div>
+          </div>
+          </a>
+
+          <a href="./Start.html" class="works__card-link">
+          <div class="works__card works__card-start">
+            <img src="./images/works__card-image--start.png" class="works__card-image" alt="架空サイト - start -">
+            <div class="works__card-text">
+              <h2 class="works__card-title">start</h2>
+              <p class="works__card-description">練習用の提供デザインをもとに、HTML/CSSを用いてコーディングしました。レスポンシブ対応にも配慮し、PC・スマホ両方で見やすくなるよう調整しています。</p>
+              <div class="works__card-tags">
+                <span class="works__card-tag">HTML</span>
+                <span class="works__card-tag">CSS</span>
+                <span class="works__card-tag">レスポンシブ</span>
+                <span class="works__card-tag">模写</span>
+              </div>
+            </div>
+          </div>
+          </a>
+
         </div>
       </div>
     </section>
 
-    <section class="skill" id="skill">
-      <h1 class="skill-title">
-          <span class="skill-title__box">
-          <span class="skill-title__en">Skill</span><br>
-          <span class="skill-title__jp">提供スキル</span>
-      </h1>
 
-      <div class="skill-area">
-        <div class="skill-area__card">
-          <i class="fa-brands fa-html5"></i>
-          <p class="skill-area__reki">学習歴：6ヶ月</p>
-          <p class="skill-area__content">デザインをもとに、忠実なマークアップ再現が可能です。ページ構造を意識して読みやすいHTMLの設計を心がけています。 現在はSEOやアクセシビリティを意識したマークアップにも取り組んでいます。 </p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-brands fa-css3-alt"></i>
-          <p class="skill-area__reki">学習歴：6ヶ月</p>
-          <p class="skill-area__content">スマートフォンからPCまで対応した、柔軟なレスポンシブ設計が可能です。また、スクロールや視覚効果を活かした、動きのある演出にも取り組んでいます。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-brands fa-js"></i>
-          <p class="skill-area__reki">学習歴：3ヶ月</p>
-          <p class="skill-area__content">基礎的な文法やDOM操作、イベント処理を学習中です。今後は動きのあるウェブ表現やjQueryの習得にも取り組む予定です。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-solid fa-file-excel"></i></i>
-          <p class="skill-area__reki">学習歴：約6ヶ月</p>
-          <p class="skill-area__content">VBAに関しては独学での学習経験があります。繰り返し処理や条件分岐、セル操作などの基礎的な構文に触れてきました。学んだ知識があるため、必要に応じて短期間で再習得できる自信があります。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-brands fa-github"></i>
-          <p class="skill-area__reki">学習歴：2ヶ月</p>
-          <p class="skill-area__content">GitHubのWebインターフェースを使ったリポジトリ管理やブランチ作成の操作は触れております。ローカル環境でのGit操作は今後学習を進めていく予定です。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-brands fa-wordpress-simple"></i>
-          <p class="skill-area__reki">学習予定</p>
-          <p class="skill-area__content">現在は未学習ですが、今後のスキルアップのためにWordPressの基本から学び、実際のサイト制作やカスタマイズを行えるようになりたいと考えています。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="fa-brands fa-php"></i>
-          <p class="skill-area__reki php">学習予定</p>
-          <p class="skill-area__content">現在はこちらも未学習ですが、今後はPHPの基礎から学び、WordPressのテーマカスタマイズなどに活かすだけでなく、動的な機能を自分で実装できるようになることを目指しています。</p>
-        </div>
-        <div class="skill-area__card">
-          <i class="#"></i>
-          <p class=""></p>
-          <p class=""></p>
-        </div>
-        <div class="skill-area__card mukou">
-          <i class="#"></i>
-          <p class=""></p>
-          <p class=""></p>
+
+
+    <section class="skill" id="skill">
+
+      <div class="skewed__area"></div>
+
+      <div class="skill__area-all">
+
+        <h1 class="skill-title">
+            <span class="skill-title__box">
+            <span class="skill-title__en">Skill</span><br>
+            <span class="skill-title__jp">提供スキル</span>
+        </h1>
+
+        <div class="skill-area">
+          <div class="skill-area__card">
+            <i class="fa-brands fa-html5"></i>
+            <p class="skill-area__reki">学習歴：6ヶ月</p>
+            <p class="skill-area__content">デザインをもとに、忠実なマークアップ再現が可能です。ページ構造を意識して読みやすいHTMLの設計を心がけています。 現在はSEOやアクセシビリティを意識したマークアップにも取り組んでいます。 </p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-brands fa-css3-alt"></i>
+            <p class="skill-area__reki">学習歴：6ヶ月</p>
+            <p class="skill-area__content">スマートフォンからPCまで対応した、柔軟なレスポンシブ設計が可能です。また、スクロールや視覚効果を活かした、動きのある演出にも取り組んでいます。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-brands fa-js"></i>
+            <p class="skill-area__reki">学習歴：3ヶ月</p>
+            <p class="skill-area__content">基礎的な文法やDOM操作、イベント処理を学習中です。今後は動きのあるウェブ表現やjQueryの習得にも取り組む予定です。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-solid fa-file-excel"></i></i>
+            <p class="skill-area__reki">学習歴：約6ヶ月</p>
+            <p class="skill-area__content">VBAに関しては独学での学習経験があります。繰り返し処理や条件分岐、セル操作などの基礎的な構文に触れてきました。学んだ知識があるため、必要に応じて短期間で再習得できる自信があります。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-brands fa-github"></i>
+            <p class="skill-area__reki">学習歴：2ヶ月</p>
+            <p class="skill-area__content">GitHubのWebインターフェースを使ったリポジトリ管理やブランチ作成の操作は触れております。ローカル環境でのGit操作は今後学習を進めていく予定です。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-brands fa-wordpress-simple"></i>
+            <p class="skill-area__reki">学習予定</p>
+            <p class="skill-area__content">現在は未学習ですが、今後のスキルアップのためにWordPressの基本から学び、実際のサイト制作やカスタマイズを行えるようになりたいと考えています。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="fa-brands fa-php"></i>
+            <p class="skill-area__reki php">学習予定</p>
+            <p class="skill-area__content">現在はこちらも未学習ですが、今後はPHPの基礎から学び、WordPressのテーマカスタマイズなどに活かすだけでなく、動的な機能を自分で実装できるようになることを目指しています。</p>
+          </div>
+          <div class="skill-area__card">
+            <i class="#"></i>
+            <p class=""></p>
+            <p class=""></p>
+          </div>
+          <div class="skill-area__card mukou">
+            <i class="#"></i>
+            <p class=""></p>
+            <p class=""></p>
+          </div>
         </div>
       </div>
     </section>
@@ -177,25 +227,25 @@
               </div>
         </div>
 
-        <div class="about-speechBubble">
-          <p>はじめまして。<br>
-          <p>元・事務職からIT業界に転身し、現在はIT系ヘルプデスクとして働きながら、Webコーダーを目指して日々学習を続けています。</p><br>
+          <div class="about-speechBubble">
+            <p>はじめまして。<br>
+            <p>元・事務職からIT業界に転身し、現在はIT系ヘルプデスクとして働きながら、Webコーダーを目指して日々学習を続けています。</p><br>
 
-          <p>これまでに、経理や総務などの事務業務を3年間、アプリ開発現場でのテスターとして1年間携わってきました。現在はヘルプデスクとして3年目を迎え、日々、ユーザーの方々の不安をやわらげたり、困りごとへの問題解決に励んでいます。ITパスポート・簿記3級も取得しており、業務理解や情報処理の基礎知識を活かしながら、丁寧で正確な対応を心がけています。</p><br>
+            <p>これまでに、経理や総務などの事務業務を3年間、アプリ開発現場でのテスターとして1年間携わってきました。現在はヘルプデスクとして3年目を迎え、日々、ユーザーの方々の不安をやわらげたり、困りごとへの問題解決に励んでいます。ITパスポート・簿記3級も取得しており、業務理解や情報処理の基礎知識を活かしながら、丁寧で正確な対応を心がけています。</p><br>
 
-          <p>現在は、HTML / CSS / JavaScriptを中心に模写やポートフォリオ制作を通して実践的な力を少しずつ積み上げています。将来的にはWebコーダーとして思いやりをもってものづくりに関われるような働き方をしていきたいと考えています。</p><br>
+            <p>現在は、HTML / CSS / JavaScriptを中心に模写やポートフォリオ制作を通して実践的な力を少しずつ積み上げています。将来的にはWebコーダーとして思いやりをもってものづくりに関われるような働き方をしていきたいと考えています。</p><br>
 
-          <p>また、デザインや動画編集、SNS運用などにも関心があり、自分の“好き”や感性を大事にしながら、できることを広げていきたいと思っています。</p><br><br>
+            <p>また、デザインや動画編集、SNS運用などにも関心があり、自分の“好き”や感性を大事にしながら、できることを広げていきたいと思っています。</p><br><br>
 
-          <p>好きなこと・趣味</p><br>
-          <p>映画やおいしいものを楽しんで、感想やレビューをことばにすること</p>
-          <p>お昼からお酒を飲んで、ペットにダル絡みするのが休日の幸せな時間</p>
-          <p>推し活やSNSでの小さな気づきやお気に入りをシェアすること</p>
-          <p>MBTIや心理テストなど、人となりに触れること</p>
-          <p>日々の中にあるちいさな“うれしい”を大切に、
-          関わる人とも、やわらかく温かなやりとりができたらうれしいです。</p>
+            <p>好きなこと・趣味</p><br>
+            <p>映画やおいしいものを楽しんで、感想やレビューをことばにすること</p>
+            <p>お昼からお酒を飲んで、ペットにダル絡みするのが休日の幸せな時間</p>
+            <p>推し活やSNSでの小さな気づきやお気に入りをシェアすること</p>
+            <p>MBTIや心理テストなど、人となりに触れること</p>
+            <p>日々の中にあるちいさな“うれしい”を大切に、
+            関わる人とも、やわらかく温かなやりとりができたらうれしいです。</p>
+          </div>
         </div>
-      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -204,6 +254,30 @@
         <span class="contact-title__en">Contact</span><br>
         <span class="contact-title__jp">お問い合わせ</span>
       </h1>
+
+      <form action="https://formspree.io/f/xvgqaneq" class="contact__form" method="POST">
+        <p class="contact__form-contents contact__form-name" ><label for="name" class="visually-hidden">お名前</label>
+        <input type="text" name="name" id="name" placeholder="NAME" required></p>
+
+        <p class="contact__form-contents contact__form-mail" ><label for="mail" class="visually-hidden">メールアドレス</label>
+        <input type="email" name="mail" id="mail" placeholder="MAIL" required></p>
+
+        <p class="contact__form-contents contact__form-textarea"><label for="message" class="visually-hidden">内容</label>
+        <textarea name="massage" id="message"  placeholder="TEXT" required></textarea></p>
+
+        <div class="contact__form-privacy">
+          <p class="contact__form-privacy-text"><strong>個人情報の取り扱いについてご確認ください。</strong><br>
+          お客様からお預かりした情報は、お問い合わせへの変身やサービスのご提供の為にのみ利用させていただきます。<br>
+          また、個人情報は以下に該当する場合を除いて第三者に提供、または公開される事はありません。<br>
+          ・法令等への協力のため、開示が必要となる場合<br>
+          ・お客様の事前の同意がある場合</p>
+
+          <label><input type="checkbox" name="checkbox" required><span class="contact__form-privacy-text--check">上記の入力事項及び注意事項を確認しました。</span></label>
+        </div>
+
+        <p class="contact__form-contents contact__form-submit"><label for="submit" class="visually-hidden">送信</label><button type="submit" id="submit"><i class="fa-solid fa-paper-plane"></i></button></p>
+      </form>
+
     </section>
 
     <footer class="footer" id="footer">

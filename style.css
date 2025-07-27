@@ -1,16 +1,16 @@
 @charset "UTF-8";
 
-/* ============================ */
-/*   1. header                  */
-/* ============================ */
+/* ===============================
+    共通設定                  
+=============================== */
 
 :root {
   --headerheight: 80px;
   --worksheight: 200px;
   --skillheight: 218px;
-  --basecolor: #584C45;
+  --basecolor: #000000;
   --basefontcolor: #F0E7D7;
-  --maincolor: #323232;
+  --maincolor: #333333;
   --backgroundcolor: #F4F0E8;
 
   --enfont: "Cormorant Garamond", serif;
@@ -29,7 +29,7 @@ body {
   background-color: var(--backgroundcolor);
 }
 
-.works, .skill, .about, .contact {
+.works, .about {
   max-width:1440px;
   width:100%;
   height:auto;
@@ -40,73 +40,64 @@ body {
 
 
 
-/* menu */
-
+/* ===============================
+    header area                  
+=============================== */
+/* header all */
 header {
   max-width:100vw;
   height: var(--headerheight);
-  padding:30px 40px 0 0;
+  padding-right: 40px;
+  align-items: center;
   margin:0 auto;
   background-color: var(--basecolor);
+  display: grid;
+  align-items: center;
 }
 
-.menu ul {
-  display:flex;   /* menu横並び　*/
+/* header nav ul */
+.header__menu ul {
+  display:flex;
   flex-direction: row;
   justify-content: flex-end;
   gap:30px;
-} 
-.menu li a {
-  display: flex;  /* 項目の縦並び */
+}
+
+/* header nav li a */
+.header__menu li a {
+  display: flex;
   flex-direction: column;
   text-align: center;
   color: var(--basefontcolor);
 }
 
-.menu-works__en {
-  font-size: 20px;  /* 英語表記 */
+/* header nav en */
+.header__menu-text--en {
+  font-size: 20px;
   padding-top:5px;
   font-family: var(--enfont);
 }
 
-.menu-works__jp {
-  font-size: 10px;  /* 日本語表記 */
+/* header nav jp */
+.header__menu-text--jp {
+  font-size: 10px;
   font-family: var(--jpfont);
 }
 
-/* title */
 
-.hero-title {
-  position:absolute;  /* titleを真ん中に移動 */
-  top:50vh;
-  left:50vw;
-  transform: translate(-50%,-50%);
-  text-align: center;
-  color: var(--maincolor);
-}
-
-.hero-title p {
-  font-size: 2rem;
-  font-family: var(--enfont-2);
-}
-
-.hero-title h1 {
-  font-size: 3rem;  /* titleのスタイル設定 */
-  user-select:none;
-  font-family: var(--enfont-2);
-}
-
-.hero-title h2 {
-  font-size: 1rem;  /* sub titleのスタイル設定 */
-  font-family: var(--jpfont-2);
-}
-
-/* background-image */
+/* ===============================
+    hero area                  
+=============================== */
+/* hero background */
 .hero__background {
-  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
   height: calc(100vh - var(--headerheight));
+  grid-template-columns: 1fr;
 }
 
+/* hero background image */
 .hero__image {
   width:100%;
   height: 100%;
@@ -114,8 +105,35 @@ header {
   position:absolute;
   inset: 0;
   opacity: 0.4;
-
+  z-index: -999;
 }
+
+/* hero title */
+.hero__title {
+  position:relative;
+  z-index: 999;
+  text-align: center;
+  color: var(--maincolor);
+}
+
+/* hero title main --PORTFOLIO-- */
+.hero__title-main {
+  font-size: 6rem;
+  user-select:none;
+  font-family: "Caveat", cursive;
+}
+
+/* hero title sub --あなたの想いを、輪郭に-- */
+.hero__message-sub {
+  font-size: 1rem;
+  font-family: var(--jpfont-2);
+}
+
+
+/* ===============================
+    works area                  
+=============================== */
+
 
 /* work  */
 .works {
@@ -123,7 +141,7 @@ header {
   background-color: var(--backgroundcolor);
 }
 
-.works-title__en {
+.works__title-box--en {
   font-size: 7rem;
   display: block;
   color: #FFF;
@@ -132,7 +150,7 @@ header {
   font-family: var(--enfont-2);
 }
 
-.works-title {
+.works__title {
   height: var(--worksheight);
   text-align: center;
   padding-top: 30px;
@@ -141,12 +159,12 @@ header {
   user-select: none;
 }
 
-.works-title__box {
+.works__title-box {
   position: relative;
   display: inline-block;
 }
 
-.works-title__jp {
+.works__title-box--jp {
   font-family: var(--jpfont-2);
   position:absolute;
   left: 60%;
@@ -156,12 +174,12 @@ header {
   letter-spacing: 0.1em;
 }
 
-.works-area {
+.works__area {
   width: 80%;
   margin: 0 auto 0;
 }
 
-.works-area__slider {
+.works__slider {
   display: flex;
   gap:20px;
   padding-top: 50px;
@@ -172,22 +190,111 @@ header {
   scroll-padding-inline-start: calc((100% - 300px) / 2);
 }
 
-.works-area__slider-card {
+/* works card hover */
+.works__card-link:hover {
+  transform: scale(1.05);
+  transition: transform 0.4s ease;
+  opacity: 0.95;
+}
+
+/* works card all */
+.works__card {
   width: 300px;
   height: 500px;
   background-color:#FFF;
   flex: 0 0 45%; /* 1枚分 */
   scroll-snap-align: center;
-  padding-bottom: 2rem;
-  border: 1px solid var(--basecolor);
+  padding: 2rem 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
+/* works card textbox */
+.works__card-text {
+  padding:2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* works card - 各種背景色指定 - */
+.works__card-portfolio {
+  /* portfolio */
+  background-color: #d8cebf;
+}
+
+.works__card-skycoffee {
+  /* skycoffee */
+  background-color: #81ccd5;
+}
+
+.works__card-start {
+  background-color: #c81562;
+  /* start */
+}
+
+/* works card mockup image */
+.works__card-image {
+  width: 100%;
+}
+
+/* works card title */
+.works__card-title {
+  font-size: 1.3rem;
+  font-family: "Playfair Display", "Noto Serif JP", serif;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  letter-spacing: 0.03rem;
+}
+
+/* works card 本文 */
+.works__card-description {
+  font-size: 0.9rem;
+  font-family: "Noto Serif JP", "Playfair Display", serif;
+  padding-bottom: 1.2rem;
+  line-height: 1.3; 
+  letter-spacing: 0.03rem;
+}
+
+/* works card tag all */
+.works__card-tags {
+  display: flex;
+  flex-flow: wrap;
+  gap:0.5rem;
+}
+
+/* works card tag */
+.works__card-tag {
+  font-family: "Noto Serif JP", "Playfair Display", serif;
+  background-color: #fff;
+	padding: .6em;
+  font-size: 0.7rem;
+  border: 1px solid #333;
+	border-left: 5px solid #333;
+  letter-spacing: 0.03rem;
+}
+
+/* ===============================
+    skewed area                  
+=============================== */
+
+.skewed__area {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  background: #4B2E2E;
+  z-index: -999;
+  clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0% 100%);
+  transform-origin: top right;
+}
+
+
 /* skill */
 .skill {
-  min-height: 100vh;
-  background-color: var(--backgroundcolor);
+  min-height: 90vh;
   position:relative;
+}
+
+.skill__area-all {
+  padding: 100px 0;
 }
 
 .skill-title {
@@ -200,7 +307,7 @@ header {
 .skill-title__en {
   font-size: 7rem;
   display: block;
-  color: #FFF;
+  color: #2E1A1A;
   opacity: 0.5;
   font-kerning: normal;
   font-family: var(--enfont-2);
@@ -215,6 +322,7 @@ header {
   white-space: nowrap;
   font-size: 15px;
   letter-spacing: 0.1em;
+  color:#F0E7D7;
 }
 
 .skill-title__box {
@@ -243,7 +351,7 @@ header {
   grid-row: 1;
   font-size: 40px;
   text-align: center;
-  color:#222;
+  color:#FCEBDD;
 }
 
 .fa-solid {
@@ -251,6 +359,7 @@ header {
   grid-row: 1;
   font-size: 40px;
   text-align: center;
+  color:#FCEBDD;
 }
 
 .skill-area__reki {
@@ -259,7 +368,7 @@ header {
   font-family: var(--jpfont-2);
   font-size: 14px;
   align-self: center;
-  color:#555;
+  color:#FAFAFA;
 }
 
 .skill-area__content {
@@ -268,7 +377,7 @@ header {
   font-family: var(--jpfont-2);
   font-size: 12px;
   line-height: 1.7;
-  color:#444;
+  color:#EADDD3;
 }
 
 /* about */
@@ -287,10 +396,11 @@ header {
 }
 
 .about-title {
-  height: var(--worksheight);
+  height: auto;
   text-align: center;
   cursor: default;
   user-select: none;
+  padding: 30px 0;
 }
 
 .about-title__box {
@@ -316,7 +426,7 @@ header {
   flex-direction: row;
   margin: 0 auto 50px;
   position: relative;
-  gap: 100px;
+  gap: 50px;
 }
 
 .about-image__box {
@@ -361,9 +471,9 @@ header {
 .about-speechBubble {
   position: relative;
   display: inline-block;
-  padding: 16px;
+  padding: 50px;
   border: 1px solid #584c45;
-  border-radius: 8px;
+  border-radius: 20px;
   background-color: #ffffff;
   text-align: left;
   font-size: 14px;
@@ -373,6 +483,7 @@ header {
   font-family: var(--jpfont-2);
 }
 
+/*
 .about-speechBubble::before {
   content: "";
   position: absolute;
@@ -398,6 +509,7 @@ header {
   transform: skew(0, 27deg);
   transform-origin: right;
 }
+  */
 
 /* contact */
 
@@ -413,9 +525,10 @@ header {
 .contact-title {
   cursor: default;
   user-select: none;
-  height: var(--skillheight);
+  height: auto;
   z-index: -999;
   text-align: right;
+  padding:30px 0;
 }
 
 .contact-title__en {
@@ -425,14 +538,13 @@ header {
   opacity: 0.5;
   font-kerning: normal;
   font-family: var(--enfont-2);
-  writing-mode: vertical-rl;
 }
 
 .contact-title__jp {
   font-family: var(--jpfont-2);
   position:absolute;
   right:60%;
-  top: 20%;
+  top: 55%;
   white-space: nowrap;
   font-size: 15px;
   letter-spacing: 0.1em;
@@ -442,6 +554,80 @@ header {
   position: relative;
   display: inline-block;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.contact__form-contents {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.contact__form-privacy {
+  width:600px;
+  height:auto;
+  margin:0 auto;
+  margin-bottom: 30px;
+}
+
+.contact__form-privacy-text {
+  font-size: 0.8rem;
+  font-family: var(--jpfont-2);
+  margin-bottom: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.05rem;
+}
+
+.contact__form-privacy-text--check {
+  padding-left: 5px;
+  font-family: var(--jpfont-2);
+
+}
+
+#name, #mail {
+  text-align: left;
+  width:600px;
+  height:50px;
+  padding:20px;
+  background-color: var(--backgroundcolor);
+  color:var(--basecolor);
+  border: 1px solid var(--basecolor);
+  border-radius: 3px;
+}
+
+  #message {
+    text-align: left;
+    padding:20px;
+    height:130px;
+    width:600px;
+    background-color: var(--backgroundcolor);
+    color:var(--basecolor);
+    border: 1px solid var(--basecolor);
+    border-radius: 3px;
+
+  }
+
+  #submit {
+    width:600px;
+    height:50px;
+    background-color: #337ab7;
+    color: var(--basefontcolor);
+    border-radius: 3px;
+    border: 1px solid #2e6da4;
+  }
+
+  .fa-paper-plane {
+    font-size: 20px;
+  }
 
 
 /* footer */
@@ -467,55 +653,85 @@ header {
   display: block;
   margin-top:80px;
   font-family: var(--enfont);
+  color: var(--basefontcolor);
 }
 
-/* --------------------------- */
-/*  1440px以下                  */
-/* --------------------------- */
+/* ==============================================================
+  1200px以上 (Worksの配置用)
+============================================================== */
+
+@media (min-width:1200px) {
+  .works__slider {
+  justify-content: center;
+  }
+}
+/* ==============================================================
+  767px以下 (タブレット～スマホ)
+============================================================== */
 
 @media (max-width:767px) {
-  
-  /* all */
-  .skill, .contact {
+
+/* ===============================
+    all                 
+=============================== */
+  .contact {
     padding:0 20px;
   }
 
-  /* header */
+/* ===============================
+    header area                  
+=============================== */
+  /* header all */
   header {
-    padding: 0 0 0 0;
-    display: grid;
-    align-items: center;
+    justify-content: end;
   }
 
-  .menu {
+  /* header menu english */
+  .header__menu-text--en {
+    font-size: 18px;
+  }
+
+  /* hero title - PORTFOLIO - */
+  .hero__title-main {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .header__menu {
     margin: 0 auto;
   }
 
-  .menu ul {
+  .header__menu ul {
     justify-content: center;
   }
 
   /* works */
 
 
-  .works-title__en {  /* en title */
+  .works__title-box--en {  /* en title */
     font-size: 6rem;
   }
 
-  .works-title {
+  .works__title {
     padding-top: 25px;
     padding-bottom: 0;
   }
 
-  .works-area__slider-card {
+  .works__card {
     flex: 0 0 90%;
   }
 
-  .works-area__slider {
+  .works__slider {
     padding-top: 0;
   }
 
   /* skill */
+
+  /* skill area all */
+  .skill__area-all {
+    padding: 50px 0;
+  }
+
   .skill-title__en {
     font-size: 6rem;
   }
@@ -649,6 +865,11 @@ header {
   height: auto;
 }
 
+#name, #mail,#message,.contact__form-privacy,#submit {
+  width: 400px;
+  max-width: 80%;
+}
+
 
 /* footer */
 .footer {
@@ -674,4 +895,104 @@ header {
 }
 
 
+}
+
+/* ==============================================================
+  480px以下 (小型スマホ用)
+============================================================== */
+
+@media (max-width:480px) {
+
+/* ===============================
+    header area                  
+=============================== */
+  /* header all */
+  header {
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* hero title - PORTFOLIO - */
+  .hero__title-main {
+    font-size: 3rem;
+  }
+
+  /* hero title - あなたの想いを輪郭に - */
+  .hero__message-sub {
+    font-size: 0.8rem;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* works sub area */
+/* breadcrumb */
+.breadcrumb__area-contents {
+  display: flex;
+  font-family: var(--enfont);
+  gap:10px;
+}
+
+.fa-greater-than {
+  color:var(--basecolor);
+  font-size: 13px;
+  vertical-align: middle;
+}
+
+.fa-solid, .fas {
+    font-weight: 100;
+    font-size: 13px;
+}
+
+.works__sub-area {
+  width:80%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.works__sub-tags {
+  padding-bottom: 2rem;
+  justify-content: flex-end;
+}
+
+.works__sub-image {
+  padding-bottom: 2rem;
+}
+
+.works__sub-area h2 {
+    font-size: 1.3rem;
+    font-family: "Playfair Display", "Noto Serif JP", serif;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
+}
+
+.works__sub-area p {
+    font-size: 1rem;
+    font-family: "Playfair Display", "Noto Serif JP", serif;
+    font-weight: 100;
+    letter-spacing: 0.03rem;
+    margin-bottom:20px;
+}
+
+.works__sub-title {
+  border-bottom: 1px #333 solid; 
+  padding-bottom:5px;
+  margin-bottom:30px;
+}
+
+.works__sub-link-content {
+  color:#1a0dab;
 }

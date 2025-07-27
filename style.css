@@ -137,8 +137,9 @@ header {
 
 /* work  */
 .works {
-  height: 100vh;
+  height: auto;
   background-color: var(--backgroundcolor);
+  margin-bottom: 80px;
 }
 
 .works__title-box--en {
@@ -151,7 +152,7 @@ header {
 }
 
 .works__title {
-  height: var(--worksheight);
+  height:auto;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -346,7 +347,7 @@ header {
   grid-template-rows: 60px auto;     /* 上段:固定、下段:自動高さ */
 }
 
-.fa-brands {
+.fa-brands{
   grid-column: 1;
   grid-row: 1;
   font-size: 40px;
@@ -354,7 +355,7 @@ header {
   color:#FCEBDD;
 }
 
-.fa-solid {
+.fa-solid  {
   grid-column: 1;
   grid-row: 1;
   font-size: 40px;
@@ -514,12 +515,13 @@ header {
 /* contact */
 
 .contact {
-  height: 100vh;
+  height: auto;
   background-image: url(./images/Frame\ 4.svg);
   background-position: 30% 30%;
   background-repeat: no-repeat;
   background-size: cover;
   position:relative;
+  margin-bottom: 100px;
 }
 
 .contact-title {
@@ -675,7 +677,7 @@ header {
     all                 
 =============================== */
   .contact {
-    padding:0 20px;
+    margin-bottom: 80px;
   }
 
 /* ===============================
@@ -697,6 +699,10 @@ header {
     font-weight: bold;
   }
 
+  .hero__title {
+    top: -50px;
+  }
+
   .header__menu {
     margin: 0 auto;
   }
@@ -705,16 +711,18 @@ header {
     justify-content: center;
   }
 
-  /* works */
-
 
   .works__title-box--en {  /* en title */
-    font-size: 6rem;
+    font-size: 4rem;
+  }
+
+  .works__title-box--jp {
+    font-size: 12px;
   }
 
   .works__title {
-    padding-top: 25px;
-    padding-bottom: 0;
+    padding-top:40px;
+    padding-bottom: 15px;
   }
 
   .works__card {
@@ -729,11 +737,17 @@ header {
 
   /* skill area all */
   .skill__area-all {
-    padding: 50px 0;
+    padding-top: 50px;
+    padding-bottom: 80px;
+
   }
 
   .skill-title__en {
-    font-size: 6rem;
+    font-size: 4rem;
+  }
+
+  .skill-title__jp {
+    font-size: 12px;
   }
 
   .skill-area__card {
@@ -768,11 +782,17 @@ header {
 
   /* about */
   .about-title {
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    margin-bottom: 15px;
   }
 
   .about-title__en {
-    font-size: 6rem;
+    font-size: 4rem;
+  }
+
+  .about-title__jp {
+    font-size: 12px;
   }
 
   .about-image__box {
@@ -809,7 +829,6 @@ header {
   .about-content__box {
     flex-direction: column;
     gap:0;
-    margin-top:-50px;
   }
 
 /* -- 吹き出し -- */
@@ -828,6 +847,7 @@ header {
   font-family: var(--jpfont-2);
 }
 
+/*
 .about-speechBubble::before {
   content: "";
   position: absolute;
@@ -853,21 +873,49 @@ header {
   transform: skew(26deg);
   transform-origin: bottom;
 }
+  */
 
 /* contact */
 .contact-title__en {
     font-size: 4rem;
-    max-height: 80vh;
+}
+
+.contact-title__jp {
+  font-size: 12px;
 }
 
 .contact-title {
   max-width: 100%;
   height: auto;
+  padding-bottom: 15px;
 }
 
 #name, #mail,#message,.contact__form-privacy,#submit {
   width: 400px;
   max-width: 80%;
+}
+
+#name, #mail, #submit {
+  height: 35px;
+  font-size: 12px;
+}
+
+#message {
+  height: 100px;
+  font-size: 12px;
+}
+
+.contact__form-privacy-text,
+.contact__form-privacy-text--check {
+  font-size: 0.6rem;
+}
+
+.contact__form-privacy {
+  margin-bottom: 20px;
+}
+
+.contact__form-contents {
+  margin-bottom: 20px;
 }
 
 
@@ -952,7 +1000,7 @@ header {
   vertical-align: middle;
 }
 
-.fa-solid, .fas {
+.fa-solid .fas {
     font-weight: 100;
     font-size: 13px;
 }

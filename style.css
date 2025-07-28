@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: var(--backgroundcolor);
 }
 
@@ -114,6 +114,11 @@ header {
 /* ===============================
     hero area                  
 =============================== */
+
+.hero {
+  position: relative;
+}
+
 /* hero background */
 .hero__background {
   display: grid;
@@ -142,8 +147,6 @@ header {
   color: var(--maincolor);
 }
 
-
-
 /* hero title main --PORTFOLIO-- */
 .hero__title-main {
   font-size: 6rem;
@@ -171,6 +174,50 @@ header {
   animation-delay: 0.5s;
 }
 
+/* ===============================
+    scroll area                  
+=============================== */
+/* scroll all */
+.scroll {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* scroll bar */
+.scroll__bar {
+  border: 1px #000 solid;
+  width: 1px;
+  height: 50px;
+  margin: 0 auto;
+  animation: growShrink 2s ease-out infinite; 
+}
+
+@keyframes growShrink {
+  0% {
+    transform-origin: top;
+    transform: scale(0);
+  }
+
+  50% {
+    transform-origin: top;
+    transform: scale(1);
+  }
+
+  50.1% {
+    transform-origin: bottom;
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+    transform-origin: bottom;
+  }
+}
 
 /* ===============================
     works area                  
@@ -854,7 +901,23 @@ background:#aaaaaa;
   /* header menu english */
   .header__menu-text--en {
     font-size: 18px;
+    padding-top: 2px;
   }
+
+  /* header nav menu */
+  .header__menu {
+    /* margin: 0 auto; */
+  }
+
+  /* header nav menu ul */
+  .header__menu ul {
+    /* justify-content: center; */
+    gap: 20px;
+  }
+
+  /* ===============================
+    hero area                  
+  =============================== */
 
   /* hero title - PORTFOLIO - */
   .hero__title-main {
@@ -866,13 +929,7 @@ background:#aaaaaa;
     top: -50px;
   }
 
-  .header__menu {
-    margin: 0 auto;
-  }
 
-  .header__menu ul {
-    justify-content: center;
-  }
 
 
   .works__title-box--en {  /* en title */

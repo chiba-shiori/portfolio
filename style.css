@@ -36,6 +36,32 @@ body {
   margin: 0 auto;
 }
 
+a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: var(--basefontcolor);
+  transition: width 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
 
 
 
@@ -116,17 +142,33 @@ header {
   color: var(--maincolor);
 }
 
+
+
 /* hero title main --PORTFOLIO-- */
 .hero__title-main {
   font-size: 6rem;
   user-select:none;
   font-family: "Caveat", cursive;
+  animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* hero title sub --あなたの想いを、輪郭に-- */
 .hero__message-sub {
   font-size: 1rem;
   font-family: var(--jpfont-2);
+  animation: fadeIn 1.5s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  animation-delay: 0.5s;
 }
 
 
@@ -298,14 +340,14 @@ header {
   padding: 100px 0;
 }
 
-.skill-title {
+.skill__title {
   cursor: default;
   user-select: none;
   height: var(--skillheight);
   z-index: -999;
 }
 
-.skill-title__en {
+.skill__title__en {
   font-size: 7rem;
   display: block;
   color: #2E1A1A;
@@ -315,7 +357,7 @@ header {
   writing-mode: vertical-rl;
 }
 
-.skill-title__jp {
+.skill__title__jp {
   font-family: var(--jpfont-2);
   position:absolute;
   left:60%;
@@ -326,12 +368,12 @@ header {
   color:#F0E7D7;
 }
 
-.skill-title__box {
+.skill__title__box {
   position: relative;
   display: inline-block;
 }
 
-.skill-area {
+.skill__area {
   width:80%;
   display: flex;
   gap: 30px;
@@ -340,7 +382,7 @@ header {
   justify-content: center;
 }
 
-.skill-area__card {
+.akill__area-card {
   width:30%;
   display: grid;
   grid-template-columns: 100px 1fr;  /* 左列:固定、右列:可変 */
@@ -363,7 +405,7 @@ header {
   color:#FCEBDD;
 }
 
-.skill-area__reki {
+.akill__area-reki {
   grid-column: 2;
   grid-row: 1;
   font-family: var(--jpfont-2);
@@ -372,7 +414,7 @@ header {
   color:#FAFAFA;
 }
 
-.skill-area__content {
+.akill__area-content {
   grid-column: 1 / span 2;
   grid-row: 2;
   font-family: var(--jpfont-2);
@@ -387,7 +429,7 @@ header {
   background-color: var(--backgroundcolor);
 }
 
-.about-title__en {
+.about__title-en {
   font-size: 7rem;
   display: block;
   color: #FFF;
@@ -396,7 +438,7 @@ header {
   font-family: var(--enfont-2);
 }
 
-.about-title {
+.about__title {
   height: auto;
   text-align: center;
   cursor: default;
@@ -404,12 +446,12 @@ header {
   padding: 30px 0;
 }
 
-.about-title__box {
+.about__title-box {
   position: relative;
   display: inline-block;
 }
 
-.about-title__jp {
+.about__title-jp {
   font-family: var(--jpfont-2);
   position:absolute;
   left: 60%;
@@ -420,7 +462,7 @@ header {
 }
 
 
-.about-content__box {
+.about__content-box {
   display: flex;
   width: 80%;
   height:auto;
@@ -430,7 +472,7 @@ header {
   gap: 50px;
 }
 
-.about-image__box {
+.about__image-box {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -493,7 +535,7 @@ background:#aaaaaa;
 }
 
 /*
-.about__content-box--yajirushi::before {
+.about__content---box--yajirushi::before {
   content:'';
   position: absolute;
   top: 50%;
@@ -505,7 +547,7 @@ background:#aaaaaa;
   display: inline-block;
 }
 
-.about__content-box--yajirushi::after {
+.about__content---box--yajirushi::after {
   content: '';
   position: absolute;
   right: 0;
@@ -516,28 +558,28 @@ background:#aaaaaa;
 }
 */
 
-.about-content__box-group {
+.about__content-box--group {
   display: flex;
   gap:10px;
   text-align: center;
   padding-bottom: 5px;
 }
 
-.about-content__name-jp__myoji,
-.about-content__name-jp__namae {
+.about__content-name--jp---myoji,
+.about__content-name--jp---namae {
   font-family: var(--jpfont-2);
   color: #555;
   font-size: 13px;
 }
 
-.about-content__name-en__namae,
-.about-content__name-en__namae {
+.about__content-name--en---namae,
+.about__content-name--en---namae {
   font-family: var(--enfont-2);
   font-size: 20px;
   color: #555;
 }
 
-.about-image {
+.about__image {
   width: 100%;
   height: 180px;
   object-fit: cover;
@@ -547,7 +589,7 @@ background:#aaaaaa;
 
 /* -- 吹き出し -- */
 
-.about-speechBubble {
+.about__speechBubble {
   position: relative;
   display: inline-block;
   padding: 50px;
@@ -712,12 +754,16 @@ background:#aaaaaa;
 .footer {
   height: 30vh;
   background-color: var(--basecolor);
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer-menu {
   display: flex;
   gap:30px;
-  padding:80px 0 0 40px;
+  padding: 50px 0 0 40px;
 }
 
 .footer-menu__content {
@@ -727,11 +773,10 @@ background:#aaaaaa;
 }
 
 .footer-copyright {
-  padding-left:40px;
   display: block;
-  margin-top:80px;
   font-family: var(--enfont);
   color: var(--basefontcolor);
+  text-align: right;
 }
 
 /* ==============================================================
@@ -747,6 +792,20 @@ background:#aaaaaa;
   767px以下 (タブレット～スマホ)
 ============================================================== */
 
+@media (hover: none) {
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background:var(--basefontcolor);
+    opacity: 0.8;
+  }
+}
+
+
 @media (max-width:767px) {
 
 /* ===============================
@@ -755,6 +814,7 @@ background:#aaaaaa;
   .contact {
     margin-bottom: 80px;
   }
+
 
 /* ===============================
     header area                  
@@ -818,21 +878,21 @@ background:#aaaaaa;
 
   }
 
-  .skill-title__en {
+  .skill__title__en {
     font-size: 4rem;
   }
 
-  .skill-title__jp {
+  .skill__title__jp {
     font-size: 12px;
   }
 
-  .skill-area__card {
+  .akill__area-card {
     width:40%;
     grid-template-columns: 40px 1fr;
     column-gap: 5px;
   }
 
-  .skill-area {
+  .skill__area {
     width: 90%;
     gap: 40px;
     margin-top:-100px;
@@ -840,11 +900,11 @@ background:#aaaaaa;
     position: relative;
   }
 
-  .skill-area__reki {
+  .akill__area-reki {
     font-size: 10px;
   }
 
-  .skill-area__content {
+  .akill__area-content {
     font-size: 10px;
   }
 
@@ -857,30 +917,30 @@ background:#aaaaaa;
   }
 
   /* about */
-  .about-title {
+  .about__title {
     padding-top: 40px;
     padding-bottom: 0;
   }
 
-  .about-title__en {
+  .about__title-en {
     font-size: 4rem;
   }
 
-  .about-title__jp {
+  .about__title-jp {
     font-size: 12px;
   }
 
-  .about-content__name-jp__myoji,
-  .about-content__name-jp__namae {
+  .about__content-name--jp---myoji,
+  .about__content-name--jp---namae {
     font-size: 9px;
   }
 
-  .about-content__name-en__namae,
-  .about-content__name-en__namae {
+  .about__content-name--en---namae,
+  .about__content-name--en---namae {
     font-size: 15px;
   }
 
-  .about-speechBubble {
+  .about__speechBubble {
     margin-top: 5vh;
   }
 
@@ -900,17 +960,17 @@ background:#aaaaaa;
     font-size: 10px;
   }
 
-  .about-image__box {
+  .about__image-box {
     align-items: flex-end;
   }
   
-  .about-content__box {
+  .about__content-box {
     flex-direction: column;
     gap:0;
     margin: 0 auto 100px;
   }
 
-  .about-image {
+  .about__image {
     object-position: center;
 
   }
@@ -918,7 +978,7 @@ background:#aaaaaa;
 
 
 /* -- 吹き出し -- */
-.about-speechBubble {
+.about__speechBubble {
   position: relative;
   display: inline-block;
   padding: 16px;
@@ -1008,6 +1068,7 @@ background:#aaaaaa;
 .footer {
   height: auto;
   display: grid;
+  justify-content: normal
 }
 
 .footer-menu {

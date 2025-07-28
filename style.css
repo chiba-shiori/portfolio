@@ -123,9 +123,7 @@ header {
 .hero__background {
   display: grid;
   align-items: center;
-  justify-content: center;
   height: calc(100vh - var(--headerheight));
-  grid-template-columns: 1fr;
 }
 
 /* hero background image */

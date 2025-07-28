@@ -233,6 +233,10 @@ header {
   scroll-padding-inline-start: calc((100% - 300px) / 2);
 }
 
+.works__card-link {
+  position: static;
+}
+
 /* works card hover */
 .works__card-link:hover {
   transform: scale(1.05);
@@ -1114,6 +1118,7 @@ background:#aaaaaa;
 /* page top */
 .pagetop {
   height: 30px;
+  position: static;
 }
 
 .fa-angle-up {

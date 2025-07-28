@@ -779,6 +779,29 @@ background:#aaaaaa;
   text-align: right;
 }
 
+/* page top */
+.pagetop {
+  display: flex;
+  height: 50px;
+  background-color: #999999;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.8;
+}
+
+.pagetop__text {
+  font-family: var(--enfont-2);
+  text-align: center;
+  color:var(--basefontcolor);
+  font-size: 15px;
+  letter-spacing: 1.2px;
+}
+
+.fa-angle-up {
+  font-size: 15px;
+
+}
+
 /* ==============================================================
   1200px以上 (Worksの配置用)
 ============================================================== */
@@ -1086,6 +1109,19 @@ background:#aaaaaa;
 .footer-copyright {
   margin-top: 0;
   padding-left: 0;
+}
+
+/* page top */
+.pagetop {
+  height: 30px;
+}
+
+.fa-angle-up {
+  font-size: 10px;
+}
+
+.pagetop__text {
+  font-size: 10px;
 }
 
 

@@ -123,7 +123,7 @@ header {
 .hero__background {
   display: grid;
   align-items: center;
-  height: calc(100vh - var(--headerheight));
+  height: calc(100svh - var(--headerheight));
 }
 
 /* hero background image */

@@ -425,7 +425,7 @@ header {
   width: 80%;
   height:auto;
   flex-direction: row;
-  margin: 0 auto 50px;
+  margin: 0 auto 150px;
   position: relative;
   gap: 50px;
 }
@@ -436,13 +436,91 @@ header {
   flex-direction: column;
 }
 
+.shirushi::before {
+  content:"★";
+  font-size: 8px;
+  color: #FFCC33;
+  padding-right: 5px;
+}
+
+.about__content-box--love {
+width:100%;
+display: flex;
+align-items:center;
+font-size:15px;
+letter-spacing:0.15em;
+font-weight:600;
+color:#333333;
+margin-top: 70px;
+padding-bottom: 10px;
+font-family: var(--jpfont-2);
+}
+
+.about__content-box--love---content {
+font-family: var(--jpfont-2);
+font-size:13px;
+}
+
+.about__content-box--love span{
+margin-left:0.5em;
+margin-right:0.5em;
+}
+.about__content-box--love:before,
+.about__content-box--love:after {
+content: "";
+display: block;
+flex: auto;
+height:1px;
+border-radius:0px;
+background:#aaaaaa;
+}
+
+.about__content-box--yajirushi {
+  background-image: url("./images/748340-removebg-preview.png");
+  background-size: cover;
+  position: relative;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-weight: 400;
+  display: block;
+  box-sizing: border-box;
+  max-width: 520px;
+  text-align: center; 
+  margin:18px 0;
+  padding:0 18px;
+  margin-inline: auto;
+}
+
+/*
+.about__content-box--yajirushi::before {
+  content:'';
+  position: absolute;
+  top: 50%;
+  right: -12px;
+  background: #333;
+  width: 52px;
+  height: 1px;
+  rotate: 60deg;
+  display: inline-block;
+}
+
+.about__content-box--yajirushi::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 6px;
+  background: #333;
+  width: 60%;
+  height: 1px;
+}
+*/
+
 .about-content__box-group {
   display: flex;
   gap:10px;
   text-align: center;
-
-  border-bottom: 1px var(--basecolor) double;
-  padding: 30px 15px 8px 15px;
+  padding-bottom: 5px;
 }
 
 .about-content__name-jp__myoji,
@@ -460,10 +538,10 @@ header {
 }
 
 .about-image {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 
@@ -473,8 +551,6 @@ header {
   position: relative;
   display: inline-block;
   padding: 50px;
-  border: 1px solid #584c45;
-  border-radius: 20px;
   background-color: #ffffff;
   text-align: left;
   font-size: 14px;
@@ -784,7 +860,6 @@ header {
   .about-title {
     padding-top: 40px;
     padding-bottom: 0;
-    margin-bottom: 15px;
   }
 
   .about-title__en {
@@ -795,18 +870,6 @@ header {
     font-size: 12px;
   }
 
-  .about-image__box {
-    position:initial;
-    gap: 30px;
-    align-items: flex-end;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .about-image {
-    width: 100px;
-  }
-
   .about-content__name-jp__myoji,
   .about-content__name-jp__namae {
     font-size: 9px;
@@ -814,30 +877,51 @@ header {
 
   .about-content__name-en__namae,
   .about-content__name-en__namae {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   .about-speechBubble {
     margin-top: 5vh;
   }
 
-  .about-content__box-group {
-    border-bottom: 1px var(--basecolor) double;
-    padding:0 15px 8px 15px;
+  .about__content-box--yajirushi{
+    padding: 13px 0;
+    margin: 0;
+    background-position: center;
+  }
+
+  .about__content-box--love---content {
+    font-size: 10px;
+    margin-right: auto;
+  }
+
+  .about__content-box--love {
+    margin-top: 15px;
+    font-size: 10px;
+  }
+
+  .about-image__box {
+    align-items: flex-end;
   }
   
   .about-content__box {
     flex-direction: column;
     gap:0;
+    margin: 0 auto 100px;
   }
+
+  .about-image {
+    object-position: center;
+
+  }
+
+
 
 /* -- 吹き出し -- */
 .about-speechBubble {
   position: relative;
   display: inline-block;
   padding: 16px;
-  border: 1px solid #584c45;
-  border-radius: 8px;
   background-color: #ffffff;
   text-align: left;
   font-size: 10px;
@@ -845,6 +929,7 @@ header {
   line-height: 1.5;
   color: #555;
   font-family: var(--jpfont-2);
+  margin-top: 3vh;
 }
 
 /*

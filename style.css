@@ -360,7 +360,7 @@ header {
 .skill__title__jp {
   font-family: var(--jpfont-2);
   position:absolute;
-  left:60%;
+  left:60% !important;
   top: 20%;
   white-space: nowrap;
   font-size: 15px;

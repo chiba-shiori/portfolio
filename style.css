@@ -894,6 +894,7 @@ background:#aaaaaa;
   /* header all */
   header {
     justify-content: end;
+    display: block;
   }
 
   /* header menu english */
@@ -907,11 +908,39 @@ background:#aaaaaa;
     /* margin: 0 auto; */
   }
 
+  .header__menu-item {
+    flex:1;
+    height:80px;
+  }
+
   /* header nav menu ul */
   .header__menu ul {
     /* justify-content: center; */
-    gap: 20px;
+    gap: 0px;
+    /* height:80px; */
+    align-items: center;
   }
+
+  .header__menu-item:nth-child(1) {
+    background-color: #9D8A7C;
+  }
+
+  .header__menu-item:nth-child(2) {
+    background-color: #796254;
+  }
+
+  .header__menu-item:nth-child(3) {
+    background-color: #523F31;
+  }
+
+  .header__menu-item:nth-child(4) {
+    background-color: #2D1E17;
+  }
+
+  .header__menu li a {
+    height: 80px;
+    justify-content: center;
+}
 
   /* ===============================
     hero area                  
@@ -1148,7 +1177,7 @@ background:#aaaaaa;
 
 /* footer */
 .footer {
-  height: auto;
+  height: 15vh;
   display: grid;
   justify-content: normal
 }
@@ -1156,18 +1185,20 @@ background:#aaaaaa;
 .footer-menu {
   padding:0;
   gap: 20px;
-  justify-content: center;
   align-items: center;
   height:10vh;
+  margin-left: 10%;
 }
 
 .footer-menu__content {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .footer-copyright {
   margin-top: 0;
   padding-left: 0;
+  font-size: 10px;
+  align-content: flex-end;
 }
 
 /* page top */

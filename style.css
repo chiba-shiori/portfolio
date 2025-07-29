@@ -956,8 +956,33 @@ background:#aaaaaa;
     top: -50px;
   }
 
+  .works__area-scroll {
+    
+  }
 
+  .works__area-arrow {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  margin-top: 9.5px;
+  border-radius: 9999px;
+  background-color: #000000;
+  margin-bottom: 10px;
+  }
 
+  .works__area-arrow::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.5px);
+  right: 0;
+  width: 20px;
+  height: 1px;
+  border-radius: 9999px;
+  background-color: #000000;
+  transform: rotate(30deg);
+  transform-origin: calc(100% - 0.5px) 50%;
+}
 
   .works__title-box--en {  /* en title */
     font-size: 4rem;

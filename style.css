@@ -908,6 +908,10 @@ background:#aaaaaa;
     /* margin: 0 auto; */
   }
 
+  .header__menu-item a {
+    position: static;
+  }
+
   .header__menu-item {
     flex:1;
     height:80px;
@@ -957,7 +961,7 @@ background:#aaaaaa;
   }
 
   .works__area-scroll {
-    
+
   }
 
   .works__area-arrow {
@@ -1310,33 +1314,32 @@ background:#aaaaaa;
 }
 
 .works__sub-tags {
-  padding-bottom: 2rem;
-  justify-content: flex-end;
+  padding-bottom: 3rem;
 }
 
 .works__sub-image {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 .works__sub-area h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "Playfair Display", "Noto Serif JP", serif;
     font-weight: 700;
     letter-spacing: 0.03rem;
 }
 
 .works__sub-area p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: "Playfair Display", "Noto Serif JP", serif;
     font-weight: 100;
     letter-spacing: 0.03rem;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 .works__sub-title {
   border-bottom: 1px #333 solid; 
   padding-bottom:5px;
-  margin-bottom:30px;
+  margin-bottom:10px;
 }
 
 .works__sub-link-content {

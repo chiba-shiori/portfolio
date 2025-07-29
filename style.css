@@ -278,6 +278,7 @@ header {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding-inline-start: calc((100% - 300px) / 2);
+  overflow-y: hidden;
 }
 
 .works__card-link {
